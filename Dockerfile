@@ -1,9 +1,9 @@
-FROM python:3.11-slim AS builder
+FROM python:3.14.4-slim AS builder
 WORKDIR /app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-FROM python:3.11-slim
+FROM python:3.14.4-slim
 LABEL name="ExtAnalysis"
 LABEL creator="Tuhinshubhra"
 LABEL desc="Browser Extension Analysis Framework"
